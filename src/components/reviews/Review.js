@@ -11,6 +11,8 @@ class Review extends Component {
   render() {
     return (
       <li>
+        {this.props.review.text}
+        <button onClick={this.handleOnClick}>Delete</button>
       </li>
     );
   }
