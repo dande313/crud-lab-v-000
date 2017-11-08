@@ -5,7 +5,14 @@ class ReviewInput extends Component {
   render() {
     return (
       <div>
-        Review Input
+        <form onSubmit={(event) => this.handleOnSubmit(event)}>
+        <label>Add Review:  </label>
+        <input type="text" value={this.state.text} onChange={(event) => this.handleOnChange(event)} />
+        <input type="submit" />
+        </form>
+        <Reviews
+        store={this.props.store}
+        restaurantId={this.props.restaurantId} />
       </div>
     );
   }
