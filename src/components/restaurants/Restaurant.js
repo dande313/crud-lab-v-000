@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class Restaurant extends Component {
   render() {
+    const {text, id } = this.props.restaurant;
     return (
       <li>
         {text}
